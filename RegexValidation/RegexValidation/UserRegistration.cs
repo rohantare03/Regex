@@ -9,8 +9,8 @@ namespace RegexValidation
 {
     internal class UserRegistration
     {
-        public string PassWord = ("^[A-Z]{1,}[0-9A-Za-z!@#$%^&*-]{6,}[0-9]{1,}$");
-        public void ValidatePassWord3(string passWord) 
+        public string PassWord = "^[A-Z]{1,}[A-Za-z0-9]{5,}[!@#$%^&*+]{1}[0-9]{1,}$";
+        public void ValidatePassWord4(string passWord)    
         {
             Regex regex = new Regex(PassWord);
             if (regex.IsMatch(passWord))
