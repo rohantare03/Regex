@@ -8,7 +8,7 @@
             UserRegistration userRegistration = new UserRegistration();
             Console.WriteLine("Enter the Password");
             string Pass_Word = Console.ReadLine();
-            userRegistration.ValidatePassWord1(Pass_Word);
+            userRegistration.ValidatePassWord2(Pass_Word);
 
         }
     }
