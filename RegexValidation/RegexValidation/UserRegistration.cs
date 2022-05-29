@@ -9,13 +9,13 @@ namespace RegexValidation
 {
     internal class UserRegistration
     {
-        public string PassWord = "^[A-Z]{1,}[A-Za-z0-9]{5,}[!@#$%^&*+]{1}[0-9]{1,}$";
-        public void ValidatePassWord4(string passWord)    
+        public string Email_Id = ("^[A-Za-z0-9]+([.+_-]?[A-Za-z0-9])*@[A-Za-z0-9]+.([c]{1}[o]{1}[m]{1})*([n]{1}[e]{1}[t]{1})*[,]*([.][a]{1}[u]{1})*([.][c]{1}[o]{1}[m]{1})*$");
+        public void ValidateAllEmail(string Email)    
         {
-            Regex regex = new Regex(PassWord);
-            if (regex.IsMatch(passWord))
+            Regex regex = new Regex(Email_Id);
+            if (regex.IsMatch(Email))
             {
-                Console.WriteLine("PassWord is valid :" + passWord);
+                Console.WriteLine("PassWord is valid :" + Email);
             }
             else
             {

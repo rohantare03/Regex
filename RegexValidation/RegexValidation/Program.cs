@@ -6,9 +6,9 @@
         {
             Console.WriteLine("Welocme to Regex");
             UserRegistration userRegistration = new UserRegistration();
-            Console.WriteLine("Enter the Password");
-            string Pass_Word = Console.ReadLine();
-            userRegistration.ValidatePassWord4(Pass_Word); 
+            Console.WriteLine("Enter the Email Ids");
+            string email_Ids = Console.ReadLine();
+            userRegistration.ValidateAllEmail(email_Ids); 
 
         }
     }
