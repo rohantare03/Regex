@@ -9,17 +9,17 @@ namespace RegexValidation
 {
     internal class UserRegistration
     {
-        public string LastName = ("^[A-Z]{1}[A-Za-z]{3,}$");
-        public void ValidateLastName(string lastName) 
+        public string Email = ("^[A-Za-z0-9]{3,}@[A-Za-z]{3,}.[a-zA-Z]{2,}");
+        public void ValidateEmailId(string Email_Id)
         {
-            Regex regex = new Regex(LastName);
-            if (regex.IsMatch(lastName))
+            Regex regex = new Regex(Email);
+            if (regex.IsMatch(Email_Id))
             {
-                Console.WriteLine("Last Name is Valid :" + lastName);
+                Console.WriteLine("Email is Valid :" + Email_Id);
             }
             else
             {
-                Console.WriteLine("Last Name is Invalid");
+                Console.WriteLine("Email is invalid");
             }
         }
     }
