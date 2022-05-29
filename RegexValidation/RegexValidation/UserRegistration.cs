@@ -9,17 +9,17 @@ namespace RegexValidation
 {
     internal class UserRegistration
     {
-        public string Email = ("^[A-Za-z0-9]{3,}@[A-Za-z]{3,}.[a-zA-Z]{2,}");
-        public void ValidateEmailId(string Email_Id)
+        public string MobileNum = ("^[0-9]{2}[ ][0-9]{10}");
+        public void ValidateMobileNum(string Mobile_Num)
         {
-            Regex regex = new Regex(Email);
-            if (regex.IsMatch(Email_Id))
+            Regex regex = new Regex(MobileNum);
+            if (regex.IsMatch(Mobile_Num))
             {
-                Console.WriteLine("Email is Valid :" + Email_Id);
+                Console.WriteLine("Mobile Number is Valid :" + Mobile_Num);
             }
             else
             {
-                Console.WriteLine("Email is invalid");
+                Console.WriteLine("Mobile Number is invalid");
             }
         }
     }

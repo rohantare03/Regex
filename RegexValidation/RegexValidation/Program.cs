@@ -6,9 +6,9 @@
         {
             Console.WriteLine("Welocme to Regex");
             UserRegistration userRegistration = new UserRegistration();
-            Console.WriteLine("Enter the EmailId");
-            string EmailId = Console.ReadLine();
-            userRegistration.ValidateEmailId(EmailId);
+            Console.WriteLine("Enter the Mobile Number");
+            string MobileNumber = Console.ReadLine();
+            userRegistration.ValidateMobileNum(MobileNumber);
 
         }
     }
