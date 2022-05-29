@@ -9,17 +9,17 @@ namespace RegexValidation
 {
     internal class UserRegistration
     {
-        public string MobileNum = ("^[0-9]{2}[ ][0-9]{10}");
-        public void ValidateMobileNum(string Mobile_Num)
+        public string PassWord = ("^[A-z0-9a-z@#&*+]{8,}$");
+        public void ValidatePassWord1(string passWord)
         {
-            Regex regex = new Regex(MobileNum);
-            if (regex.IsMatch(Mobile_Num))
+            Regex regex = new Regex(PassWord);
+            if (regex.IsMatch(passWord))
             {
-                Console.WriteLine("Mobile Number is Valid :" + Mobile_Num);
+                Console.WriteLine("PassWord is valid :" + passWord);
             }
             else
             {
-                Console.WriteLine("Mobile Number is invalid");
+                Console.WriteLine("PassWord is invalid");
             }
         }
     }
