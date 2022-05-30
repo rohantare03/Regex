@@ -9,17 +9,17 @@ namespace RegexValidation
 {
     internal class UserRegistration
     {
-        public string Email_Id = ("^[A-Za-z0-9]+([.+_-]?[A-Za-z0-9])*@[A-Za-z0-9]+.([c]{1}[o]{1}[m]{1})*([n]{1}[e]{1}[t]{1})*[,]*([.][a]{1}[u]{1})*([.][c]{1}[o]{1}[m]{1})*$");
-        public void ValidateAllEmail(string Email)    
+        public string FirstName = ("^[A-Z]{1}[A-Za-z]{2,}$");
+        public void Validate_FirstName(string firstName)
         {
-            Regex regex = new Regex(Email_Id);
-            if (regex.IsMatch(Email))
+            Regex regex = new Regex(FirstName);
+            if (regex.IsMatch(firstName))
             {
-                Console.WriteLine("PassWord is valid :" + Email);
+                Console.WriteLine("First Name is Valid :" + firstName);
             }
             else
             {
-                Console.WriteLine("PassWord is invalid");
+                Console.WriteLine("First Name is Invalid");
             }
         }
     }

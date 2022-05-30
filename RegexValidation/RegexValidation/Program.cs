@@ -6,10 +6,10 @@
         {
             Console.WriteLine("Welocme to Regex");
             UserRegistration userRegistration = new UserRegistration();
-            Console.WriteLine("Enter the Email Ids");
-            string email_Ids = Console.ReadLine();
-            userRegistration.ValidateAllEmail(email_Ids); 
-
+            //uc1 : first  name
+            Console.WriteLine("Enter the First Name : ");
+            string first_Name = Console.ReadLine();
+            userRegistration.Validate_FirstName(first_Name);
         }
     }
 }
