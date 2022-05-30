@@ -23,6 +23,12 @@
             string EmailId = Console.ReadLine();
             userRegistration.Validate_EmailId(EmailId);
 
+            //uc4 : Mobile Number
+            Console.WriteLine("----------------------------");
+            Console.WriteLine("Enter the Mobile Number");
+            string mobileNum = Console.ReadLine();
+            userRegistration.Validate_Mobile(mobileNum);
+
         }
     }
 }

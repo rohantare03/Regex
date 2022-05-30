@@ -12,6 +12,7 @@ namespace RegexValidation
         public string FirstName = ("^[A-Z]{1}[A-Za-z]{2,}$");
         public string LastName = ("^[A-Z]{1}[A-Za-z]{2,}$");
         public string Email = ("^[A-Za-z0-9]{3,}@[A-Za-z]{3,}.[a-zA-Z]{2,}");
+        public string MobileNum = ("^[0-9]{2}[ ][0-9]{10}");
         public void Validate_FirstName(string firstName)
         {
             Regex regex = new Regex(FirstName);
@@ -46,6 +47,18 @@ namespace RegexValidation
             else
             {
                 Console.WriteLine("Email is invalid");
+            }
+        }
+        public void Validate_Mobile(string Mobile_Num)
+        {
+            Regex regex = new Regex(MobileNum);
+            if (regex.IsMatch(Mobile_Num))
+            {
+                Console.WriteLine("Mobile Number is Valid :" + Mobile_Num);
+            }
+            else
+            {
+                Console.WriteLine("Mobile Number is invalid");
             }
         }
     }
