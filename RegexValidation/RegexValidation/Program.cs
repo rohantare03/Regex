@@ -29,6 +29,12 @@
             string mobileNum = Console.ReadLine();
             userRegistration.Validate_Mobile(mobileNum);
 
+            //uc5 : password
+            Console.WriteLine("----------------------------");
+            Console.WriteLine("Enter the PassWord");
+            string pass_Word = Console.ReadLine();
+            userRegistration.Validate_PassWord(pass_Word);
+
         }
     }
 }
