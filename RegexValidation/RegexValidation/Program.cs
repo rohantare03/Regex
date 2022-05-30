@@ -16,6 +16,13 @@
             Console.WriteLine("Enter the Last Name");
             string last_Name = Console.ReadLine();
             userRegistration.Validate_LastName(last_Name);
+
+            //uc3 : Email
+            Console.WriteLine("----------------------------");
+            Console.WriteLine("Enter the Email Id");
+            string EmailId = Console.ReadLine();
+            userRegistration.Validate_EmailId(EmailId);
+
         }
     }
 }
