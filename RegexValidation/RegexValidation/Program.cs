@@ -35,6 +35,12 @@
             string pass_Word = Console.ReadLine();
             userRegistration.Validate_PassWord(pass_Word);
 
+            //uc9 : AllEmails
+            Console.WriteLine("----------------------------");
+            Console.WriteLine("Enter the Email");
+            string all_Email = Console.ReadLine();
+            userRegistration.Validate_AllEmails(all_Email);
+
         }
     }
 }
