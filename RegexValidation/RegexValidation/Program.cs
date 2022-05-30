@@ -29,7 +29,7 @@
             string mobileNum = Console.ReadLine();
             userRegistration.Validate_Mobile(mobileNum);
 
-            //uc7 : password
+            //uc8 : password
             Console.WriteLine("----------------------------");
             Console.WriteLine("Enter the PassWord");
             string pass_Word = Console.ReadLine();
