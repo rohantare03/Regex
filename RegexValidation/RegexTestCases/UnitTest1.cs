@@ -86,5 +86,20 @@ namespace RegexTestCases
             //Assert
             Assert.AreEqual(expected, actual);
         }
+        //<summary>
+        //uc6 : Comparing the password of user with minimum one upper case
+        //</summary>
+        [Test]
+        public void Comparing_the_Password_of_User_Minimum_one_Upper_Case()
+        {
+            //Arrange
+            string Password2 = "Rohan99tare";
+            userRegistration = new UserRegistration();
+            //Act
+            string expected = "Rohan99tare";
+            string actual = userRegistration.Validate_PassWord2(Password2);
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
