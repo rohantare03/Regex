@@ -56,5 +56,20 @@ namespace RegexTestCases
             //Assert
             Assert.AreEqual(expected, actual);
         }
+        //<summary>
+        //uc4 : Comparing the mobile number of user
+        //</summary>
+        [Test]
+        public void Comparing_the_Mobile_Number_of_User()
+        {
+            //Arrange
+            string Mobile_Num = "91 9158499217";
+            userRegistration = new UserRegistration();
+            //Act
+            string expected = "91 9158499217";
+            string actual = userRegistration.Mobile(Mobile_Num);
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
