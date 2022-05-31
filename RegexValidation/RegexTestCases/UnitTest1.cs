@@ -41,5 +41,20 @@ namespace RegexTestCases
             //Assert
             Assert.AreEqual(expected, actual);
         }
+        //<summary>
+        //uc3 : Comparing the EmailId of user
+        //</summary>
+        [Test]
+        public void Comparing_the_EmailId_of_User()
+        {
+            //Arrange
+            string Email_Id = "rohantare310@gmail.com";
+            userRegistration = new UserRegistration();
+            //Act
+            string expected = "rohantare310@gmail.com";
+            string actual = userRegistration.EmailId(Email_Id);
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
