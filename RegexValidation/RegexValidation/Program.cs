@@ -53,6 +53,12 @@
             Console.WriteLine("Enter the Password with minimum one numeric value : ");
             string Password4 = Console.ReadLine();
             userRegistration.Validate_PassWord(Password4);
+
+            //uc9 : AllEmails
+            Console.WriteLine("----------------------------");
+            Console.WriteLine("Enter the Email");
+            string all_Email = Console.ReadLine();
+            userRegistration.Validate_AllEmails(all_Email);
         }
     }
 }

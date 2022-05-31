@@ -131,5 +131,20 @@ namespace RegexTestCases
             //Assert
             Assert.AreEqual(expected, actual);
         }
+        //<summary>
+        //uc9 : Comparing the Emails of all the given sample Emails
+        //</summary>
+        [Test]
+        public void Comparing_the_Emails_of_all_the_given_Sample_Emails()
+        {
+            //Arrange
+            string all_Email = "abc-100@gmail.com.com";
+            userRegistration = new UserRegistration();
+            //Act
+            string expected = "abc-100@gmail.com.com";
+            string actual = userRegistration.Validate_AllEmails(all_Email);
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
