@@ -116,5 +116,20 @@ namespace RegexTestCases
             //Assert
             Assert.AreEqual(expected, actual);
         }
+        //<summary>
+        //uc8 : Comparing the password of user with exactly one special character
+        //</summary>
+        [Test]
+        public void Comparing_the_Password_of_User_exactly_one_Special_Character()
+        {
+            //Arrange
+            string Password4 = "Rohantare#99";
+            userRegistration = new UserRegistration();
+            //Act
+            string expected = "Rohantare#99";
+            string actual = userRegistration.Validate_PassWord4(Password4);
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }

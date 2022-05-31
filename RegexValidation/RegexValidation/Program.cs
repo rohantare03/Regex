@@ -47,6 +47,12 @@
             string Password3 = Console.ReadLine();
             userRegistration.Validate_PassWord(Password3);
 
+
+            //uc8 : Password exactly one special character
+            Console.WriteLine("----------------------------");
+            Console.WriteLine("Enter the Password with minimum one numeric value : ");
+            string Password4 = Console.ReadLine();
+            userRegistration.Validate_PassWord(Password4);
         }
     }
 }

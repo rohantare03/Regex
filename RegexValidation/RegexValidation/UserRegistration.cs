@@ -16,6 +16,7 @@ namespace RegexValidation
         public string PassWord1 = ("^[A-Za-z0-9@#$%^&*+]{8,}$");
         public string PassWord2 = ("^[A-Z]{1,}[A-Za-z0-9@#$%^&*+]{7,}$");
         public string PassWord3 = ("^[A-Z]{1,}[A-Za-z0-9@#$%^&*+]{6,}[0-9]{1,}$");
+        public string PassWord4 = ("^[A-Z]{1,}[A-Za-z0-9]{5,}[@#$%^&*+]{1}[0-9]{1,}$");
 
         public string Validate_FirstName(string firstName)
         {
@@ -107,6 +108,19 @@ namespace RegexValidation
                 Console.WriteLine("Password is invalid");
             }
             return passWord3;
+        }
+        public string Validate_PassWord4(string passWord4)
+        {
+            Regex regex = new Regex(PassWord4);
+            if (regex.IsMatch(passWord4))
+            {
+                Console.WriteLine("Password is valid :" + passWord4);
+            }
+            else
+            {
+                Console.WriteLine("Password is invalid");
+            }
+            return passWord4;
         }
     }
 }
