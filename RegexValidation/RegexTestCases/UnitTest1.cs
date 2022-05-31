@@ -101,5 +101,20 @@ namespace RegexTestCases
             //Assert
             Assert.AreEqual(expected, actual);
         }
+        //<summary>
+        //uc7 : Comparing the password of user with minimum one numeric value
+        //</summary>
+        [Test]
+        public void Comparing_the_Password_of_User_Minimum_one_Numeric_Value()
+        {
+            //Arrange
+            string Password3 = "Rohantare99";
+            userRegistration = new UserRegistration();
+            //Act
+            string expected = "Rohantare99";
+            string actual = userRegistration.Validate_PassWord3(Password3);
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }

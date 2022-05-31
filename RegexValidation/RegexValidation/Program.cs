@@ -41,6 +41,12 @@
             string Password2 = Console.ReadLine();
             userRegistration.Validate_PassWord(Password2);
 
+            //uc7 : Password minimum one numeric value
+            Console.WriteLine("----------------------------");
+            Console.WriteLine("Enter the Password with minimum one numeric value : ");
+            string Password3 = Console.ReadLine();
+            userRegistration.Validate_PassWord(Password3);
+
         }
     }
 }
