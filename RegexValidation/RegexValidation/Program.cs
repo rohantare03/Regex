@@ -10,37 +10,6 @@
             Console.WriteLine("Enter the First Name : ");
             string first_Name = Console.ReadLine();
             userRegistration.Validate_FirstName(first_Name);
-
-            //uc2 : last name
-            Console.WriteLine("----------------------------");
-            Console.WriteLine("Enter the Last Name");
-            string last_Name = Console.ReadLine();
-            userRegistration.Validate_LastName(last_Name);
-
-            //uc3 : Email
-            Console.WriteLine("----------------------------");
-            Console.WriteLine("Enter the Email Id");
-            string EmailId = Console.ReadLine();
-            userRegistration.Validate_EmailId(EmailId);
-
-            //uc4 : Mobile Number
-            Console.WriteLine("----------------------------");
-            Console.WriteLine("Enter the Mobile Number");
-            string mobileNum = Console.ReadLine();
-            userRegistration.Validate_Mobile(mobileNum);
-
-            //uc8 : password
-            Console.WriteLine("----------------------------");
-            Console.WriteLine("Enter the PassWord");
-            string pass_Word = Console.ReadLine();
-            userRegistration.Validate_PassWord(pass_Word);
-
-            //uc9 : AllEmails
-            Console.WriteLine("----------------------------");
-            Console.WriteLine("Enter the Email");
-            string all_Email = Console.ReadLine();
-            userRegistration.Validate_AllEmails(all_Email);
-
         }
     }
 }
