@@ -26,5 +26,20 @@ namespace RegexTestCases
             //Assert
             Assert.AreEqual(expected, actual);
         }
+        //<summary>
+        //uc2 : Comparing the last name of user
+        //</summary>
+        [Test]
+        public void Comparing_the_Last_Name_of_User()
+        {
+            //Arrange
+            string lastName = "Tare";
+            userRegistration = new UserRegistration();
+            //Act
+            string expected = "Tare";
+            string actual = userRegistration.Last_Name(lastName);
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }

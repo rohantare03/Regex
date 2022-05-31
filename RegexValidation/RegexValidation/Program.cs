@@ -10,6 +10,12 @@
             Console.WriteLine("Enter the First Name : ");
             string first_Name = Console.ReadLine();
             userRegistration.Validate_FirstName(first_Name);
+
+            //uc2 : last name
+            Console.WriteLine("----------------------------");
+            Console.WriteLine("Enter the Last Name");
+            string last_Name = Console.ReadLine();
+            userRegistration.Last_Name(last_Name);
         }
     }
 }
