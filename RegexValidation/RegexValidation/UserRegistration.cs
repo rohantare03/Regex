@@ -13,6 +13,7 @@ namespace RegexValidation
         public string LastName = ("^[A-Z]{1}[A-Za-z]{2,}$");
         public string Email = ("^[A-Za-z0-9]{3,}@[A-Za-z]{3,}.[a-zA-Z]{2,}$");
         public string MobileNum = ("^[0-9]{2}[ ][0-9]{10}$");
+        public string PassWord1 = ("^[A-Za-z0-9@#$%^&*+]{8,}$");
 
         public string Validate_FirstName(string firstName)
         {
@@ -27,7 +28,7 @@ namespace RegexValidation
             }
             return firstName;
         }
-        public string Last_Name(string lastName)
+        public string Validate_LastName(string lastName)
         {
             Regex regex = new Regex(LastName);
             if (regex.IsMatch(lastName))
@@ -40,7 +41,7 @@ namespace RegexValidation
             }
             return lastName;
         }
-        public string EmailId(string Email_Id)
+        public string Validate_EmailId(string Email_Id)
         {
             Regex regex = new Regex(Email);
             if (regex.IsMatch(Email_Id))
@@ -53,7 +54,7 @@ namespace RegexValidation
             }
             return Email_Id;
         }
-        public string Mobile(string Mobile_Num)
+        public string Validate_Mobile(string Mobile_Num)
         {
             Regex regex = new Regex(MobileNum);
             if (regex.IsMatch(Mobile_Num))
@@ -65,6 +66,19 @@ namespace RegexValidation
                 Console.WriteLine("Mobile Number is invalid");
             }
             return Mobile_Num;
+        }
+        public string Validate_PassWord(string passWord)
+        {
+            Regex regex = new Regex(PassWord1);
+            if (regex.IsMatch(passWord))
+            {
+                Console.WriteLine("Password is valid :" + passWord);
+            }
+            else
+            {
+                Console.WriteLine("Password is invalid");
+            }
+            return passWord;
         }
     }
 }

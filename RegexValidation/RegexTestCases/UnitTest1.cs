@@ -37,7 +37,7 @@ namespace RegexTestCases
             userRegistration = new UserRegistration();
             //Act
             string expected = "Tare";
-            string actual = userRegistration.Last_Name(lastName);
+            string actual = userRegistration.Validate_LastName(lastName);
             //Assert
             Assert.AreEqual(expected, actual);
         }
@@ -52,7 +52,7 @@ namespace RegexTestCases
             userRegistration = new UserRegistration();
             //Act
             string expected = "rohantare310@gmail.com";
-            string actual = userRegistration.EmailId(Email_Id);
+            string actual = userRegistration.Validate_EmailId(Email_Id);
             //Assert
             Assert.AreEqual(expected, actual);
         }
@@ -67,7 +67,22 @@ namespace RegexTestCases
             userRegistration = new UserRegistration();
             //Act
             string expected = "91 9158499217";
-            string actual = userRegistration.Mobile(Mobile_Num);
+            string actual = userRegistration.Validate_Mobile(Mobile_Num);
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+        //<summary>
+        //uc5 : Comparing the password of user
+        //</summary>
+        [Test]
+        public void Comparing_the_Password_of_User()
+        {
+            //Arrange
+            string Password = "rohan99tare";
+            userRegistration = new UserRegistration();
+            //Act
+            string expected = "rohan99tare";
+            string actual = userRegistration.Validate_PassWord(Password);
             //Assert
             Assert.AreEqual(expected, actual);
         }
