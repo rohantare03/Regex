@@ -29,7 +29,7 @@ namespace RegexValidation
             }
             catch (NullReferenceException)
             {
-                throw new RegexCustomException(RegexCustomException.Exceptiontype.FIRSTNAME_INVALID, "First name should not be invalid");
+                throw new RegexValidationCustomException(RegexValidationCustomException.Exceptiontype.FIRSTNAME_INVALID, "First name should not be invalid");
             }
         }
         public string Validate_LastName(string lastName) 
@@ -49,7 +49,7 @@ namespace RegexValidation
             }
             catch (NullReferenceException)
             {
-                throw new RegexCustomException(RegexCustomException.Exceptiontype.LASTNAME_INVALID, "Last name should not be invalid");
+                throw new RegexValidationCustomException(RegexValidationCustomException.Exceptiontype.LASTNAME_INVALID, "Last name should not be invalid");
             }
         }
     }
