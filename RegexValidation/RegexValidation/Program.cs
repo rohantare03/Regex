@@ -14,9 +14,8 @@
             //uc2 : last name
             Console.WriteLine("----------------------------");
             Console.WriteLine("Enter the Last Name");
-            string last_Name = Console.ReadLine();
-            userRegistration.Validate_LastName(last_Name);
-
+            string last_name = Console.ReadLine();
+            userRegistration.Validate_LastName(last_name);
         }
     }
 }
