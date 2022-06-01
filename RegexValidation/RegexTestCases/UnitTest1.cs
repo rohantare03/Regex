@@ -5,7 +5,7 @@ namespace RegexTestCases
 {
     public class Tests
     {
-        UserRegistration userRegistration;
+        UserRegistration userRegistration; 
         [SetUp]
         public void Setup()
         {
@@ -41,110 +41,6 @@ namespace RegexTestCases
             //Assert
             Assert.AreEqual(expected, actual);
         }
-        //<summary>
-        //uc3 : Comparing the EmailId of user
-        //</summary>
-        [Test]
-        public void Comparing_the_EmailId_of_User()
-        {
-            //Arrange
-            string Email_Id = "rohantare310@gmail.com";
-            userRegistration = new UserRegistration();
-            //Act
-            string expected = "rohantare310@gmail.com";
-            string actual = userRegistration.Validate_EmailId(Email_Id);
-            //Assert
-            Assert.AreEqual(expected, actual);
-        }
-        //<summary>
-        //uc4 : Comparing the mobile number of user
-        //</summary>
-        [Test]
-        public void Comparing_the_Mobile_Number_of_User()
-        {
-            //Arrange
-            string Mobile_Num = "91 9158499217";
-            userRegistration = new UserRegistration();
-            //Act
-            string expected = "91 9158499217";
-            string actual = userRegistration.Validate_Mobile(Mobile_Num);
-            //Assert
-            Assert.AreEqual(expected, actual);
-        }
-        //<summary>
-        //uc5 : Comparing the password of user
-        //</summary>
-        [Test]
-        public void Comparing_the_Password_of_User()
-        {
-            //Arrange
-            string Password = "rohan99tare";
-            userRegistration = new UserRegistration();
-            //Act
-            string expected = "rohan99tare";
-            string actual = userRegistration.Validate_PassWord(Password);
-            //Assert
-            Assert.AreEqual(expected, actual);
-        }
-        //<summary>
-        //uc6 : Comparing the password of user with minimum one upper case
-        //</summary>
-        [Test]
-        public void Comparing_the_Password_of_User_Minimum_one_Upper_Case()
-        {
-            //Arrange
-            string Password2 = "Rohan99tare";
-            userRegistration = new UserRegistration();
-            //Act
-            string expected = "Rohan99tare";
-            string actual = userRegistration.Validate_PassWord2(Password2);
-            //Assert
-            Assert.AreEqual(expected, actual);
-        }
-        //<summary>
-        //uc7 : Comparing the password of user with minimum one numeric value
-        //</summary>
-        [Test]
-        public void Comparing_the_Password_of_User_Minimum_one_Numeric_Value()
-        {
-            //Arrange
-            string Password3 = "Rohantare99";
-            userRegistration = new UserRegistration();
-            //Act
-            string expected = "Rohantare99";
-            string actual = userRegistration.Validate_PassWord3(Password3);
-            //Assert
-            Assert.AreEqual(expected, actual);
-        }
-        //<summary>
-        //uc8 : Comparing the password of user with exactly one special character
-        //</summary>
-        [Test]
-        public void Comparing_the_Password_of_User_exactly_one_Special_Character()
-        {
-            //Arrange
-            string Password4 = "Rohantare#99";
-            userRegistration = new UserRegistration();
-            //Act
-            string expected = "Rohantare#99";
-            string actual = userRegistration.Validate_PassWord4(Password4);
-            //Assert
-            Assert.AreEqual(expected, actual);
-        }
-        //<summary>
-        //uc9 : Comparing the Emails of all the given sample Emails
-        //</summary>
-        [Test]
-        public void Comparing_the_Emails_of_all_the_given_Sample_Emails()
-        {
-            //Arrange
-            string all_Email = "abc-100@gmail.com.com";
-            userRegistration = new UserRegistration();
-            //Act
-            string expected = "abc-100@gmail.com.com";
-            string actual = userRegistration.Validate_AllEmails(all_Email);
-            //Assert
-            Assert.AreEqual(expected, actual);
-        }
+      
     }
 }
