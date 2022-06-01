@@ -15,7 +15,7 @@
             Console.WriteLine("----------------------------");
             Console.WriteLine("Enter the Last Name");
             string last_Name = Console.ReadLine();
-            userRegistration.Last_Name(last_Name);
+            userRegistration.Validate_LastName(last_Name);
         }
     }
 }

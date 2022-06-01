@@ -14,29 +14,43 @@ namespace RegexValidation
 
         public string Validate_FirstName(string firstName)
         {
-            Regex regex = new Regex(FirstName);
-            if (regex.IsMatch(firstName))
+            try
             {
-                Console.WriteLine("First Name is Valid :" + firstName);
+                Regex regex = new Regex(FirstName);
+                if (regex.IsMatch(firstName))
+                {
+                    Console.WriteLine("First Name is Valid :" + firstName);
+                }
+                else
+                {
+                    Console.WriteLine("First Name is Invalid");
+                }
+                return firstName;
             }
-            else
+            catch (NullReferenceException)
             {
-                Console.WriteLine("First Name is Invalid");
+                throw new RegexCustomException(RegexCustomException.Exceptiontype.FIRSTNAME_INVALID, "First name should not be invalid");
             }
-            return firstName;
         }
-        public string Last_Name(string lastName)
+        public string Validate_LastName(string lastName) 
         {
-            Regex regex = new Regex(LastName);
-            if (regex.IsMatch(lastName))
+            try
             {
-                Console.WriteLine("Last Name is Valid :" + lastName);
+                Regex regex = new Regex(LastName);
+                if (regex.IsMatch(lastName))
+                {
+                    Console.WriteLine("Last Name is Valid :" + lastName);
+                }
+                else
+                {
+                    Console.WriteLine("Last Name is Invalid");
+                }
+                return lastName;
             }
-            else
+            catch (NullReferenceException)
             {
-                Console.WriteLine("Last Name is Invalid");
+                throw new RegexCustomException(RegexCustomException.Exceptiontype.LASTNAME_INVALID, "Last name should not be invalid");
             }
-            return lastName;
         }
     }
 }

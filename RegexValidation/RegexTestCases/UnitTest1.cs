@@ -5,7 +5,7 @@ namespace RegexTestCases
 {
     public class Tests
     {
-        UserRegistration userRegistration;
+        UserRegistration userRegistration; 
         [SetUp]
         public void Setup()
         {
@@ -37,9 +37,10 @@ namespace RegexTestCases
             userRegistration = new UserRegistration();
             //Act
             string expected = "Tare";
-            string actual = userRegistration.Last_Name(lastName);
+            string actual = userRegistration.Validate_LastName(lastName);
             //Assert
             Assert.AreEqual(expected, actual);
         }
+      
     }
 }
