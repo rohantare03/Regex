@@ -58,7 +58,7 @@
             Console.WriteLine("----------------------------");
             Console.WriteLine("Enter the Email");
             string all_Email = Console.ReadLine();
-            userRegistration.Validate_AllEmails(all_Email);
+            userRegistration.Validate_All_Emails(all_Email);
         }
     }
 }

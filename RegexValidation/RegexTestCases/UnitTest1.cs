@@ -142,7 +142,7 @@ namespace RegexTestCases
             userRegistration = new UserRegistration();
             //Act
             string expected = "abc-100@gmail.com.com";
-            string actual = userRegistration.Validate_AllEmails(all_Email);
+            string actual = userRegistration.Validate_All_Emails(all_Email);
             //Assert
             Assert.AreEqual(expected, actual);
         }

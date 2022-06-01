@@ -123,7 +123,7 @@ namespace RegexValidation
             }
             return passWord4;
         }
-        public string Validate_AllEmails(string All_Email)
+        public string Validate_All_Emails(string All_Email)
         {
             Regex regex = new Regex(AllEmails);
             if (regex.IsMatch(All_Email))
