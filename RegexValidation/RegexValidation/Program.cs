@@ -54,7 +54,7 @@
             string Password4 = Console.ReadLine();
             userRegistration.Validate_PassWord(Password4);
 
-            //uc9 : AllEmails
+            //uc9 : AllEmail Samples
             Console.WriteLine("----------------------------");
             Console.WriteLine("Enter the Email");
             string all_Email = Console.ReadLine();
