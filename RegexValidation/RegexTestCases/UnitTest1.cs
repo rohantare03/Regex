@@ -15,136 +15,178 @@ namespace RegexTestCases
         //uc1 : Comparing the first name of user
         //</summary>
         [Test]
-        public void Comparing_the_First_Name_of_User()
+        public void Comparing_the_First_Name_of_User_If_Improper_throw_Exception()
         {
             //Arrange
-            string firstName = "Rohan";
-            userRegistration = new UserRegistration();
-            //Act
-            string expected = "Rohan";
-            string actual = userRegistration.Validate_FirstName(firstName);
-            //Assert
-            Assert.AreEqual(expected, actual);
+            string firstName = "rohan";
+            string expected = "First Name should not be invalid";
+            try
+            {
+                //Act
+                userRegistration.First_Name(firstName);
+            }
+            catch (RegexCustomException expection)
+            {
+                //Assert
+                Assert.AreEqual(expected, expection.Message);
+            }
         }
         //<summary>
         //uc2 : Comparing the last name of user
         //</summary>
         [Test]
-        public void Comparing_the_Last_Name_of_User()
+        public void Comparing_the_Last_Name_of_User_If_Improper_throw_Exception()
         {
             //Arrange
-            string lastName = "Tare";
-            userRegistration = new UserRegistration();
-            //Act
-            string expected = "Tare";
-            string actual = userRegistration.Validate_LastName(lastName);
-            //Assert
-            Assert.AreEqual(expected, actual);
+            string lastName = "tae";
+            string expected = "Last Name should not be invalid";
+            try
+            {
+                //Act                
+                userRegistration.Last_Name(lastName);
+            }
+            catch (RegexCustomException expection)
+            {
+                //Assert
+                Assert.AreEqual(expected, expection.Message);
+            }
         }
         //<summary>
         //uc3 : Comparing the EmailId of user
         //</summary>
         [Test]
-        public void Comparing_the_EmailId_of_User()
+        public void Comparing_the_EmailId_of_User_If_Improper_throw_Exception()
         {
             //Arrange
-            string Email_Id = "rohantare310@gmail.com";
-            userRegistration = new UserRegistration();
-            //Act
-            string expected = "rohantare310@gmail.com";
-            string actual = userRegistration.Validate_EmailId(Email_Id);
-            //Assert
-            Assert.AreEqual(expected, actual);
+            string Email_Id = "rohantare";
+            string expected = "Email should not be invalid";
+            try
+            {
+                //Act                
+                userRegistration.EmailId(Email_Id);
+            }
+            catch (RegexCustomException expection)
+            {
+                //Assert
+                Assert.AreEqual(expected, expection.Message);
+            }
         }
         //<summary>
         //uc4 : Comparing the mobile number of user
         //</summary>
         [Test]
-        public void Comparing_the_Mobile_Number_of_User()
+        public void Comparing_the_Mobile_Number_of_User_If_Improper_throw_Exception()
         {
             //Arrange
-            string Mobile_Num = "91 9158499217";
-            userRegistration = new UserRegistration();
-            //Act
-            string expected = "91 9158499217";
-            string actual = userRegistration.Validate_Mobile(Mobile_Num);
-            //Assert
-            Assert.AreEqual(expected, actual);
+            string Mobile_num = "9158499217";
+            string expected = "Mobile Number should not be invalid";
+            try
+            {
+                //Act               
+                userRegistration.Mobile(Mobile_num);
+            }
+            catch (RegexCustomException expection)
+            {
+                //Assert
+                Assert.AreEqual(expected, expection.Message);
+            }
         }
         //<summary>
         //uc5 : Comparing the password of user
         //</summary>
         [Test]
-        public void Comparing_the_Password_of_User()
+        public void Comparing_the_Password_of_User_If_Improper_throw_Exception()
         {
             //Arrange
-            string Password = "rohan99tare";
-            userRegistration = new UserRegistration();
-            //Act
-            string expected = "rohan99tare";
-            string actual = userRegistration.Validate_PassWord(Password);
-            //Assert
-            Assert.AreEqual(expected, actual);
+            string password = " ";
+            string expected = "Password should not be invalid";
+            try
+            {
+                //Act                
+                userRegistration.Validate_PassWord(password);
+            }
+            catch (RegexCustomException expection)
+            {
+                //Assert
+                Assert.AreEqual(expected, expection.Message);
+            }
         }
         //<summary>
         //uc6 : Comparing the password of user with minimum one upper case
         //</summary>
         [Test]
-        public void Comparing_the_Password_of_User_Minimum_one_Upper_Case()
+        public void Comparing_the_Password_of_User_Minimum_one_Upper_Case_If_Improper_throw_Exception()
         {
             //Arrange
-            string Password2 = "Rohan99tare";
-            userRegistration = new UserRegistration();
-            //Act
-            string expected = "Rohan99tare";
-            string actual = userRegistration.Validate_PassWord2(Password2);
-            //Assert
-            Assert.AreEqual(expected, actual);
+            string password2 = "rohant";
+            string expected = "Password should not be invalid";
+            try
+            {
+                //Act                
+                userRegistration.Validate_PassWord2(password2);
+            }
+            catch (RegexCustomException expection)
+            {
+                //Assert
+                Assert.AreEqual(expected, expection.Message);
+            }
         }
         //<summary>
         //uc7 : Comparing the password of user with minimum one numeric value
         //</summary>
         [Test]
-        public void Comparing_the_Password_of_User_Minimum_one_Numeric_Value()
+        public void Comparing_the_Password_of_User_Minimum_one_Numeric_Value_If_Improper_throw_Exception()
         {
-            //Arrange
-            string Password3 = "Rohantare99";
-            userRegistration = new UserRegistration();
-            //Act
-            string expected = "Rohantare99";
-            string actual = userRegistration.Validate_PassWord3(Password3);
-            //Assert
-            Assert.AreEqual(expected, actual);
+            string password3 = "RohanTare";
+            string expected = "Password should not be invalid";
+            try
+            {
+                //Act               
+                userRegistration.Validate_PassWord3(password3);
+            }
+            catch (RegexCustomException expection)
+            {
+                //Assert
+                Assert.AreEqual(expected, expection.Message);
+            }
         }
         //<summary>
         //uc8 : Comparing the password of user with exactly one special character
         //</summary>
         [Test]
-        public void Comparing_the_Password_of_User_exactly_one_Special_Character()
+        public void Comparing_the_Password_of_User_exactly_one_Special_Character_If_Improper_throw_Exception()
         {
-            //Arrange
-            string Password4 = "Rohantare#99";
-            userRegistration = new UserRegistration();
-            //Act
-            string expected = "Rohantare#99";
-            string actual = userRegistration.Validate_PassWord4(Password4);
-            //Assert
-            Assert.AreEqual(expected, actual);
+            string password4 = "RohanTare99";
+            string expected = "Password should not be invalid";
+            try
+            {
+                //Act                
+                userRegistration.Validate_PassWord4(password4);
+            }
+            catch (RegexCustomException expection)
+            {
+                //Assert
+                Assert.AreEqual(expected, expection.Message);
+            }
         }
         //<summary>
         //uc9 : Comparing the Emails of all the given sample Emails
         //</summary>
         [Test]
-        public void Comparing_the_Emails_of_all_the_given_Sample_Emails()
+        public void Comparing_the_Emails_of_all_the_given_Sample_Emails_If_Improper_throw_Exception() 
         {
-            //Arrange
-            string all_Email = "abc-100@gmail.com.com";
-            userRegistration = new UserRegistration();
-            //Act
-            string expected = "abc-100@gmail.com.com";
-            string actual = userRegistration.Validate_All_Emails(all_Email);
-            //Assert
-            Assert.AreEqual(expected, actual);
+            string allemail = "";
+            string expected = "Email should not be invalid";
+            try
+            {
+                //Act               
+                userRegistration.Validate_AllEmails(allemail);
+            }
+            catch (RegexCustomException expection)
+            {
+                //Assert
+                Assert.AreEqual(expected, expection.Message);
+            }
         }
     }
 }
