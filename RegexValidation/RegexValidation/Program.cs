@@ -6,58 +6,59 @@
         {
             Console.WriteLine("Welocme to Regex");
             UserRegistration userRegistration = new UserRegistration();
-            //uc1 : first  name
-            Console.WriteLine("Enter the First Name : ");
-            string first_Name = Console.ReadLine();
-            userRegistration.First_Name(first_Name);
+            //uc1 : first name
+            Console.WriteLine("Enter the First Name");
+            string firstname = Console.ReadLine();
+            userRegistration.ValidFirstName(firstname);
+
 
             //uc2 : last name
             Console.WriteLine("----------------------------");
             Console.WriteLine("Enter the Last Name");
             string last_Name = Console.ReadLine();
-            userRegistration.Last_Name(last_Name);
+            userRegistration.ValidLastName(last_Name);
 
             //uc3 : Email
             Console.WriteLine("----------------------------");
             Console.WriteLine("Enter the Email Id");
             string email_Id = Console.ReadLine();
-            userRegistration.EmailId(email_Id);
+            userRegistration.ValidEmail(email_Id);
 
-            //uc4 : Mobile Number
+            //uc4 : Mobile
             Console.WriteLine("----------------------------");
             Console.WriteLine("Enter the Mobile Number");
-            string mobileNum = Console.ReadLine();
-            userRegistration.Mobile(mobileNum);
+            string mobile_Num = Console.ReadLine();
+            userRegistration.ValidMobile(mobile_Num);
 
             //uc5 : Password
             Console.WriteLine("----------------------------");
             Console.WriteLine("Enter the Password");
-            string Password = Console.ReadLine();
-            userRegistration.Validate_PassWord(Password);
+            string passWord = Console.ReadLine();
+            userRegistration.ValidPassword(passWord);
 
-            //uc6 : Password
+            //uc6 : Password with minimum one upper case
             Console.WriteLine("----------------------------");
-            Console.WriteLine("Enter the Password with minimum one upper case: ");
-            string Password2 = Console.ReadLine();
-            userRegistration.Validate_PassWord(Password2);
+            Console.WriteLine("Enter the Password with minimum one upper case");
+            string passWord2 = Console.ReadLine();
+            userRegistration.ValidPassword2(passWord2);
 
-            //uc7 : Password
+            //uc7 : Password with minimum one numeric value
             Console.WriteLine("----------------------------");
-            Console.WriteLine("Enter the Password with minimum one numeric value : ");
-            string Password3 = Console.ReadLine();
-            userRegistration.Validate_PassWord(Password3);
+            Console.WriteLine("Enter the Password with minimum one numeric value");
+            string passWord3 = Console.ReadLine();
+            userRegistration.ValidPassword3(passWord3);
 
-            //uc8 : Password
+            //uc8 : Password with exactly one special character
             Console.WriteLine("----------------------------");
-            Console.WriteLine("Enter the Password with minimum one numeric value : ");
-            string Password4 = Console.ReadLine();
-            userRegistration.Validate_PassWord(Password4);
+            Console.WriteLine("Enter the Password with exactly one special character");
+            string passWord4 = Console.ReadLine();
+            userRegistration.ValidPassword4(passWord4);
 
-            //uc9 : AllEmails
+            //uc9 :All Email Samples
             Console.WriteLine("----------------------------");
-            Console.WriteLine("Enter the Email");
-            string all_Email = Console.ReadLine();
-            userRegistration.Validate_AllEmails(all_Email);
+            Console.WriteLine("Enter the Sample Email");
+            string Allemail = Console.ReadLine();
+            userRegistration.ValidEmail(Allemail);
         }
     }
 }

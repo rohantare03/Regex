@@ -19,11 +19,11 @@ namespace RegexTestCases
         {
             //Arrange
             string firstName = "rohan";
-            string expected = "First Name should not be invalid";
+            string expected = "FirstName is invalid";
             try
             {
                 //Act
-                userRegistration.First_Name(firstName);
+                userRegistration.ValidFirstName(firstName);
             }
             catch (RegexCustomException expection)
             {
@@ -38,12 +38,12 @@ namespace RegexTestCases
         public void Comparing_the_Last_Name_of_User_If_Improper_throw_Exception()
         {
             //Arrange
-            string lastName = "tae";
-            string expected = "Last Name should not be invalid";
+            string lastName = "tare";
+            string expected = "LastName is invalid";
             try
             {
-                //Act                
-                userRegistration.Last_Name(lastName);
+                //Act
+                userRegistration.ValidLastName(lastName);
             }
             catch (RegexCustomException expection)
             {
@@ -52,18 +52,18 @@ namespace RegexTestCases
             }
         }
         //<summary>
-        //uc3 : Comparing the EmailId of user
+        //uc3 : Comparing the email of user
         //</summary>
         [Test]
         public void Comparing_the_EmailId_of_User_If_Improper_throw_Exception()
         {
             //Arrange
-            string Email_Id = "rohantare";
-            string expected = "Email should not be invalid";
+            string email = " ";
+            string expected = "EmailId is invalid";
             try
             {
-                //Act                
-                userRegistration.EmailId(Email_Id);
+                //Act
+                userRegistration.ValidEmail(email);
             }
             catch (RegexCustomException expection)
             {
@@ -72,18 +72,18 @@ namespace RegexTestCases
             }
         }
         //<summary>
-        //uc4 : Comparing the mobile number of user
+        //uc4 : Comparing the Mobile Number of user
         //</summary>
         [Test]
         public void Comparing_the_Mobile_Number_of_User_If_Improper_throw_Exception()
         {
             //Arrange
-            string Mobile_num = "9158499217";
-            string expected = "Mobile Number should not be invalid";
+            string mobile_Num = "9158499217";
+            string expected = "Mobile Number is invalid";
             try
             {
-                //Act               
-                userRegistration.Mobile(Mobile_num);
+                //Act
+                userRegistration.ValidMobile(mobile_Num);
             }
             catch (RegexCustomException expection)
             {
@@ -92,18 +92,18 @@ namespace RegexTestCases
             }
         }
         //<summary>
-        //uc5 : Comparing the password of user
+        //uc5 : Comparing the Password of user
         //</summary>
         [Test]
         public void Comparing_the_Password_of_User_If_Improper_throw_Exception()
         {
             //Arrange
-            string password = " ";
-            string expected = "Password should not be invalid";
+            string passWord = "rohant";
+            string expected = "Password is invalid";
             try
             {
-                //Act                
-                userRegistration.Validate_PassWord(password);
+                //Act
+                userRegistration.ValidPassword(passWord);
             }
             catch (RegexCustomException expection)
             {
@@ -112,18 +112,18 @@ namespace RegexTestCases
             }
         }
         //<summary>
-        //uc6 : Comparing the password of user with minimum one upper case
+        //uc6 : Comparing the Password of user with minimum one upper case
         //</summary>
         [Test]
-        public void Comparing_the_Password_of_User_Minimum_one_Upper_Case_If_Improper_throw_Exception()
+        public void Comparing_the_Password_of_User_with_Minimum_One_Upper_case_If_Improper_throw_Exception()
         {
             //Arrange
-            string password2 = "rohant";
-            string expected = "Password should not be invalid";
+            string passWord2 = "rohantare";
+            string expected = "Password is invalid";
             try
             {
-                //Act                
-                userRegistration.Validate_PassWord2(password2);
+                //Act
+                userRegistration.ValidPassword2(passWord2);
             }
             catch (RegexCustomException expection)
             {
@@ -132,17 +132,18 @@ namespace RegexTestCases
             }
         }
         //<summary>
-        //uc7 : Comparing the password of user with minimum one numeric value
+        //uc7: Comparing the Password of user with minimum one numeric value
         //</summary>
         [Test]
-        public void Comparing_the_Password_of_User_Minimum_one_Numeric_Value_If_Improper_throw_Exception()
+        public void Comparing_the_Password_of_User_with_Minimum_One_Numeric_value_If_Improper_throw_Exception()
         {
-            string password3 = "RohanTare";
-            string expected = "Password should not be invalid";
+            //Arrange
+            string passWord3 = "RohanTare";
+            string expected = "Password is invalid";
             try
             {
-                //Act               
-                userRegistration.Validate_PassWord3(password3);
+                //Act
+                userRegistration.ValidPassword3(passWord3);
             }
             catch (RegexCustomException expection)
             {
@@ -151,17 +152,18 @@ namespace RegexTestCases
             }
         }
         //<summary>
-        //uc8 : Comparing the password of user with exactly one special character
+        //uc8: Comparing the Password of user with exactly one special character
         //</summary>
         [Test]
-        public void Comparing_the_Password_of_User_exactly_one_Special_Character_If_Improper_throw_Exception()
+        public void Comparing_the_Password_of_User_with_Exactly_One_Special_Character_If_Improper_throw_Exception()
         {
-            string password4 = "RohanTare99";
-            string expected = "Password should not be invalid";
+            //Arrange
+            string passWord4 = "RohanTare99";
+            string expected = "Password is invalid";
             try
             {
-                //Act                
-                userRegistration.Validate_PassWord4(password4);
+                //Act
+                userRegistration.ValidPassword4(passWord4);
             }
             catch (RegexCustomException expection)
             {
@@ -170,17 +172,18 @@ namespace RegexTestCases
             }
         }
         //<summary>
-        //uc9 : Comparing the Emails of all the given sample Emails
+        //uc9 : Comparing the All Email Samples
         //</summary>
         [Test]
-        public void Comparing_the_Emails_of_all_the_given_Sample_Emails_If_Improper_throw_Exception() 
+        public void Comparing_the_All_Email_Samples_If_Improper_throw_Exception()
         {
-            string allemail = "";
-            string expected = "Email should not be invalid";
+            //Arrange
+            string Allemail = " ";
+            string expected = "Email is invalid";
             try
             {
-                //Act               
-                userRegistration.Validate_AllEmails(allemail);
+                //Act
+                userRegistration.ValidAllEmails(Allemail);
             }
             catch (RegexCustomException expection)
             {
